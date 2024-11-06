@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="cabecera-cabecera">
+        <h1>Formulario</h1>
+        <nav class="cabecera-nav">
+            <ul class="cabecera-lista">
+                <li><a href="./index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="name">Nombre:</label>
+                <input  type="text" id="name" name="name">
+                <br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="birth">Fecha y hora de nacimiento</label>
+                <input type="datetime" id="birth" name="birth">
+                <br>
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone" pattern="([0-9]){3} [0-9]{3}-[0-9]{4}">
+                <br>
+                <label for="page">URL:</label>
+                <input type="url" id="page" name="page" placeholder="Escribe la URL de tu página web personal">
+                <br>
+                <label for="color">Color Favorito:</label>
+                <input type="color" id="color" name="color">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Información General:</legend>
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date">
+                <br>
+                <label for="time">Tiempo:</label>
+                <input type="time" id="time" name="time">
+                <br>
+                <label for="month">Mes:</label>
+                <input type="month" id="month" name="month">
+                <br>
+                <label for="week">Semana:</label>
+                <input type="week" id="week" name="week">
+                <br>
+                <label for="num">Número (min-10, max 10):</label>
+                <input type="number" id="num" name="num" min="-10" max="10">
+                <br>
+                <label for="interval">Intervalo (min: 0, max: 10):</label>
+                <input type="range" id="interval" name="interval" min="0" max="10">
+                <br>
+                <label for="search">Término de búsqueda:</label>
+                <input type="search" id="search" name="search">
+                <br>
+                <button>¡Enviar!</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

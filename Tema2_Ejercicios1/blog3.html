@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Blog</title>
+</head>
+<body>
+    <header class="cabecera-cabecera">
+        <h1>Blog</h1>
+        <nav class="cabecera-nav">
+            <ul class="cabecera-lista">
+                <li><a href="./index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-main">
+        <article class="main-articulo">
+            <h2>Vídeo</h2>
+            <br>
+            <p>Vídeo de ejemplo de un oso.</p>
+            <br>
+            <video id="video" width="720" autoplay>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/movie.webm" type="video/webm">
+                Etiqueta "video" no soportada.
+            </video>
+            <div class="botones">
+                <button id="btn-1">Reiniciar</button>
+                <button id="btn-2">Retrasar</button>
+                <button id="btn-3">Adelantar</button>
+                <button id="btn-4">Silenciar</button>
+                <button id="btn-5">Bajar Volumen</button>
+                <button id="btn-6">Subir Volumen</button>
+            </div>
+        </article>
+    </main>
+    <script>
+        //Reiniciar
+        document.getElementById("btn-1").addEventListener("click", () => {
+            const video = document.getElementById("video");
+            video.load();
+        }, false);
+
+        //Retrasar 5 segundos
+        document.getElementById("btn-2").addEventListener("click", () => {
+            const video = document.getElementById("video");
+        }, false);
+
+        //Adelantar 5 segundos
+        document.getElementById("btn-3").addEventListener("click", () => {
+            const video = document.getElementById("video");
+        }, false);
+
+        //Silenciar/Escuchar
+        document.getElementById("btn-4").addEventListener("click", () => {
+            const video = document.getElementById("video");
+            if(!video.muted){
+                document.getElementById("btn-4").innerHTML = "Silenciar";
+            }else{
+                document.getElementById("btn-4").innerHTML = "Escuchar";
+            }
+        }, false);
+
+        //Bajar volumen
+        document.getElementById("btn-5").addEventListener("click", () => {
+            const video = document.getElementById("video");
+            
+            console.log(video.volume);
+        }, false);
+
+        //Subir volumen
+        document.getElementById("btn-6").addEventListener("click", () => {
+            const video = document.getElementById("video");
+        }, false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.cabecera-cabecera{
+    border: 1px solid rgb(179, 177, 177);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    width: 100%;
+}
+.cabecera-cabecera h1{
+    margin: 10px;
+}
+
+.cabecera-nav{
+    margin-left: 50px;
+    width: 70%;
+}
+.cabecera-lista{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MAIN */
+.main-alumno{
+    margin: 20px;
+}
+
+.main-guia{
+    margin: 20px;
+}
+
+.main-articulo{
+    width: 99%;
+    margin: 50px;
+}
+
+.main-articulo p{
+    text-align: left;
+}
+
+.main-section{
+    width: 50%;
+    margin: 15px;
+    padding: 20px;
+}
+
+.texto{
+    width: 500px;
+    margin-bottom: 20px;
+    border: 0.5px dotted crimson;
+    padding: 15px;
+}
+
+.main-section p{
+    text-align: justify;
+    margin: 10px;
+}
+
+/* RANDOM */
+
+figure{
+    width: 500px;
+}
+
+fieldset{
+    margin: 15px;
+    border: 2px solid rgb(25, 145, 29);
+    padding: 20px;
+}
+
+fieldset legend{
+    color:rgb(7, 95, 7);
+    text-decoration: underline;
+}
+
+form label{
+    color:rgb(1, 119, 1);
+}
+
+form input{
+    margin-bottom: 10px;
+}
+
+input[type=url]{
+    width: 200px;
+}
+
+button{
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#btn-1{
+    margin-left: 50px;
+}
