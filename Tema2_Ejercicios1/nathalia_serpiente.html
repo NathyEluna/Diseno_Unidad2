@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de la Serpiente</title>
+    <link rel="stylesheet" href="./nathalia_estilo.css">
+    <title>Juego de la Serpiente</title>
+</head>
+<body>
+    <canvas id="juego" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById("juego");
+        const ctx = canvas.getContext("2d");
+        
+        //Tamaño jugador.
+        const serpiente = 15;
+        
+        //Posición inicial(centro).
+        let pX = canvas.width / 2;
+        let pY = canvas.height / 2;
+        
+        //Dirección inicial del jugador.
+        let dX = serpiente;
+        let dY = 0;
+        
+        //Controlar el estado de pausa.
+        let isPausado = false;
+
+        //Función para detectar las teclas y actualizar la dirección.
+        const apretarTecla = (event) => {
+            const llave = event.keyCode;
+
+            //Izquierda
+            if (llave === 37 && dX === 0) {
+                dX = -serpiente;
+                dY = 0;
+            } else if (llave === 38 && dY === 0) { // Arriba
+                dX = 0;
+                dY = -serpiente;
+            } else if (llave === 39 && dX === 0) { // Derecha
+                dX = serpiente;
+                dY = 0;
+            //Abajo.
+            } else if (llave === 40 && dY === 0) {
+                dX = 0;
+                dY = serpiente;
+            //Pausar con P.
+            } else if (llave === 80) {
+                isPausado = !isPausado;
+            };
+        };
+
+        //Función para actualizar la posición del jugador.
+        const actualizar = () => {
+            if (!isPausado) {
+                pX += dX;
+                pY += dY;
+
+                // Evitar que el jugador salga del lienzo
+                if(pX < 0){
+                    pX = canvas.width - serpiente;
+                }else if(pX >= canvas.width){
+                    pX = 0;
+                };
+
+                if(pY < 0){
+                    pY = canvas.height - serpiente;
+                }else if(pY >= canvas.height){
+                    pY = 0;
+                };
+            };
+        };
+
+        //Función para dibujar el estado actual del juego.
+        const dibujar = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            //Dibujar el jugador.
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(pX, pY, serpiente, serpiente);
+
+            // Mostrar el estado de pausa si el juego está pausado
+            if (isPausado) {
+                ctx.fillStyle = 'white';
+                ctx.font = '30px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Juego en pausa', canvas.width / 2, canvas.height / 2);
+            };
+        };
+
+        //Función del bucle de juego.
+        const bucleJuego = () => {
+            actualizar();
+            dibujar();
+
+            //Velocidad de actualización.
+            setTimeout(bucleJuego, 100);
+        };
+
+        //Iniciar el juego y configurar el evento de teclado.
+        window.addEventListener('keydown', apretarTecla);
+        bucleJuego();
+    </script>
+</body>
+</html>

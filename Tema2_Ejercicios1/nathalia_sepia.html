@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepia</title>
+</head>
+<body>
+    <h2>En W3Schools, que es donde he estado haciendo las tareas SVG y Canvas si que funciona y al menos en Google Chrome no :c</h2>
+    <img id="imagen" src="https://www.w3schools.com/html/pic_trulli.jpg">
+<canvas width="300" height="200" id="canvas">
+    No tiene soporte para canvas
+</canvas>
+<script>
+window.onload = function(){
+	var canvas = document.getElementById("canvas");
+    
+	if (canvas && canvas.getContext){	
+		var ctx = canvas.getContext("2d");
+		var srcImg = document.getElementById("imagen");
+        
+		ctx.drawImage(srcImg, 0, 0, ctx.canvas.width, ctx.canvas.height);
+		var imgData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
+        var pixels = imgData.data;
+        
+        //Codigo diferente del blanco y negro.
+		for (let i = 0; i < pixels.length; i += 4) {
+                //Obtener los valores originales RGB.
+                const r = pixels[i];
+                const g = pixels[i + 1];
+                const b = pixels[i + 2];
+
+                //Aplicar la fórmula sepia.
+                let tr = 0.393 * r + 0.769 * g + 0.189 * b;
+                let tg = 0.349 * r + 0.686 * g + 0.168 * b;
+                let tb = 0.272 * r + 0.534 * g + 0.131 * b;
+
+                //Truncar los valores y asegurarse de que no superen 255.
+                pixels[i] = tr > 255 ? 255 : Math.trunc(tr); //Red.
+                pixels[i + 1] = tg > 255 ? 255 : Math.trunc(tg); //Green.
+                pixels[i + 2] = tb > 255 ? 255 : Math.trunc(tb); //Blue.
+            };//for
+        
+		ctx.putImageData(imgData, 0, 0);
+	};//if
+};//window
+</script>    
+</body>
+</html>

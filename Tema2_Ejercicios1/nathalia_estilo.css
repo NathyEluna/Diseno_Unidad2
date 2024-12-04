@@ -11,6 +11,7 @@
     text-align: left;
     display: flex;
     width: 100%;
+    background-color: blueviolet;
 }
 .cabecera-cabecera h1{
     margin: 10px;
@@ -19,6 +20,8 @@
 .cabecera-nav{
     margin-left: 50px;
     width: 70%;
+    padding: 15px;
+    background-color: white;
 }
 .cabecera-lista{
     width: 100%;
@@ -28,6 +31,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
 }
 
 /* MAIN */
@@ -64,6 +73,10 @@
 .main-section p{
     text-align: justify;
     margin: 10px;
+}
+
+h5{
+    margin-left: 50px;
 }
 
 /* RANDOM */
@@ -110,4 +123,13 @@ button:hover{
 
 #btn-1{
     margin-left: 50px;
+}
+
+ol{
+    margin: 10px 25px;
+}
+
+#juego{
+        background-color: green;
+        border: 3px solid black;
 }

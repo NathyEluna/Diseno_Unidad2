@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./nathalia_estilo.css">
+    <title>Actividades</title>
+</head>
+<body>
+    <header class="cabecera-cabecera">
+        <h1>Actividades</h1>
+        <nav class="cabecera-nav">
+            <ul class="cabecera-lista">
+                <li><a href="./nathalia_index.html">Início</a></li>
+                <li><a href="./nathalia_blog3.html">Blog</a></li>
+                <li><a href="./nathalia_imagen.html">Imagen</a></li>
+                <li><a href="./nathalia_formulario.html">Formulario</a></li>
+                <li><a href="./nathalia_actividades.html">Actividades</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-main">
+        <article class="main-articulo">
+            <header>
+                <h2>Actividades 2</h2>
+            </header>
+            <main>
+                <section>
+                    <h3>Ejercicio 1:</h3>
+
+                    <p>
+                        El atributo "spreadMethod" en SVG es utilizado en gradientes,
+                        como "linearGradient" y "radialGradient" para decidir qué pasa
+                        cuando el gradiente termina antes de llenar el espacio completo.
+                        <br><br>
+                        Puede tener los siguientes valores:
+                        <ol>
+                            <li><strong>pad:</strong> Extiende el color del borde del gradiente hasta llenar el espacio.</li>
+                            <li><strong>reflect:</strong> Refleja el gradiente en ambas direcciones, creando un efecto de espejo.</li>
+                            <li><strong>repeat:</strong> Repite el gradiente en la misma dirección sin reflejarlo.</li>
+                        </ol>
+                    </p>
+
+                    <h4>Ejemplos de uso:</h4>
+                    <br>
+
+                    <h5>pad:</h5>
+                    <pre>
+                    &lt;linearGradient id="gradiente" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" spreadMethod="pad"&gt;
+                        &lt;stop offset="0%" stop-color="blue" /&gt;
+                        &lt;stop offset="100%" stop-color="yellow" /&gt;
+                    &lt;/linearGradient>
+                    </pre>
+
+                    <h5>reflect:</h5>
+                    <pre>
+                    &lt;linearGradient id="gradiente" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" spreadMethod="reflect"&gt;
+                        &lt;stop offset="0%" stop-color="blue" /&gt;
+                        &lt;stop offset="100%" stop-color="yellow" /&gt;
+                    &lt;/linearGradient>
+                    </pre>
+
+                    <h5>repeat:</h5>
+                    <pre>
+                    &lt;linearGradient id="gradiente" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" spreadMethod="repeat"&gt;
+                        &lt;stop offset="0%" stop-color="blue" /&gt;
+                        &lt;stop offset="100%" stop-color="yellow" /&gt;
+                    &lt;/linearGradient>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Ejercicio 4:</h3>
+
+                    <svg height="400" width="380">
+                        <defs>
+                          <radialGradient id="grad-1" cx="20%" cy="50%" r="50%" fx="68%" fy="50%">
+                            <stop offset="0%" stop-color="deeppink" />
+                            <stop offset="100%" stop-color="rgb(57, 5, 57)" />
+                          </radialGradient>
+                        </defs>
+                        <rect x="100" y="50" width="400" height="230" fill="url(#grad-1)" />
+                        Etiqueta SVG no soportada.
+                      </svg>
+                </section>
+                <section>
+                    <h3>Ejercicio 7:</h3>
+                    <svg width="300" height="250">
+                        <defs>
+                        <pattern id="pat-1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <rect x="0" y="0" width="20" height="15" fill="royalblue"/>
+                            <circle cx="5" cy="20" r="20" fill="black" />
+                            <circle cx="10" cy="10" r="5" fill="purple" />
+                          </pattern>
+                        </defs>
+                        <rect width="300" height="240" x="0" y="0" stroke="blue" fill="url(#pat-1)" />
+                        Etiqueta SVG no soportada.
+                    </svg>
+
+                    <svg width="300" height="250">
+                        <defs>
+                        <pattern id="pat-2" x="0" y="0" width="20" height="50" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="20" height="35" fill="royalblue"/>
+                        <rect x="0" y="0" width="20" height="25" fill="green"/>
+                                <rect x="0" y="0" width="20" height="15" fill="pink"/>
+                              <image href="https://www.w3schools.com/images/stickman.gif" />
+                          </pattern>
+                        </defs>                     
+                        <rect width="285" height="240" x="0" y="0" stroke="blue" fill="url(#pat-2)" />
+                        Etiqueta SVG no soportada.
+                    </svg>
+                </section>
+            </main>
+        </article>
+        <article class="main-articulo">
+            <header>
+                <h2>Actividades 3</h2>
+            </header>
+            <main>
+                <section>
+                    <h3>Ejercicio 4:</h3>
+                </section>
+            </main>
+        </article>
+        <article class="main-articulo">
+            <header>
+                <h2>Actividades 4</h2>
+            </header>
+            <main>
+                <section>
+                    <h3>Ejercicio 1:</h3>
+                </section>
+                <section>
+                    <h3>Ejercicio 5:</h3>
+                    <ul class="cabecera-lista">
+                        <li><a href="./nathalia_sepia.html">Imagen Sepia</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Ejercicio 6:</h3>
+                    <ul class="cabecera-lista">
+                        <li><a href="./nathalia_serpiente.html">Juego de la Serpiente</a></li>
+                    </ul>
+                </section>
+            </main>
+        </article>
+    </main>
+</body>
+</html>
